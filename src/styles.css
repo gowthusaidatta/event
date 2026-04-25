@@ -1,0 +1,342 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   Telugu Half Saree Invitation — Design System
+   Rich South Indian palette: maroon, gold, mango, peacock green
+   ============================================================ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-maroon: var(--maroon);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-mango: var(--mango);
+  --color-peacock: var(--peacock);
+  --color-cream: var(--cream);
+
+  --font-telugu: "Noto Serif Telugu", serif;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* App chrome — warm cream */
+  --background: oklch(0.97 0.02 80);
+  --foreground: oklch(0.25 0.08 25);
+
+  --card: oklch(0.99 0.01 80);
+  --card-foreground: oklch(0.25 0.08 25);
+  --popover: oklch(0.99 0.01 80);
+  --popover-foreground: oklch(0.25 0.08 25);
+
+  /* Maroon as primary brand */
+  --primary: oklch(0.38 0.15 20);
+  --primary-foreground: oklch(0.97 0.03 85);
+
+  --secondary: oklch(0.93 0.04 85);
+  --secondary-foreground: oklch(0.3 0.1 25);
+
+  --muted: oklch(0.94 0.02 80);
+  --muted-foreground: oklch(0.45 0.05 30);
+
+  --accent: oklch(0.78 0.15 85);
+  --accent-foreground: oklch(0.25 0.1 25);
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.86 0.04 80);
+  --input: oklch(0.9 0.03 80);
+  --ring: oklch(0.55 0.15 60);
+
+  /* Traditional palette */
+  --maroon: oklch(0.36 0.16 22);
+  --maroon-deep: oklch(0.28 0.13 22);
+  --gold: oklch(0.72 0.15 80);
+  --gold-light: oklch(0.86 0.12 88);
+  --gold-deep: oklch(0.58 0.16 70);
+  --mango: oklch(0.82 0.18 90);
+  --peacock: oklch(0.45 0.12 200);
+  --peacock-deep: oklch(0.35 0.1 200);
+  --cream: oklch(0.97 0.03 90);
+  --cream-deep: oklch(0.93 0.05 88);
+
+  /* Gradients */
+  --gradient-gold: linear-gradient(
+    135deg,
+    oklch(0.86 0.12 88) 0%,
+    oklch(0.72 0.15 80) 50%,
+    oklch(0.58 0.16 70) 100%
+  );
+  --gradient-gold-shine: linear-gradient(
+    100deg,
+    oklch(0.7 0.14 75) 0%,
+    oklch(0.92 0.12 90) 45%,
+    oklch(0.7 0.14 75) 100%
+  );
+  --gradient-maroon: linear-gradient(
+    160deg,
+    oklch(0.4 0.16 22) 0%,
+    oklch(0.28 0.13 22) 100%
+  );
+  --gradient-card: radial-gradient(
+      ellipse at top,
+      oklch(0.98 0.04 88) 0%,
+      oklch(0.95 0.05 85) 60%,
+      oklch(0.92 0.06 80) 100%
+    );
+  --gradient-peacock: linear-gradient(
+    135deg,
+    oklch(0.45 0.12 200) 0%,
+    oklch(0.35 0.1 200) 100%
+  );
+
+  /* Shadows */
+  --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--maroon) 35%, transparent);
+  --shadow-gold: 0 10px 30px -10px color-mix(in oklab, var(--gold) 50%, transparent);
+  --shadow-soft: 0 8px 24px -8px color-mix(in oklab, var(--maroon) 15%, transparent);
+
+  /* Sidebar (unused, keep defaults for shadcn) */
+  --sidebar: oklch(0.97 0.02 80);
+  --sidebar-foreground: oklch(0.25 0.08 25);
+  --sidebar-primary: oklch(0.38 0.15 20);
+  --sidebar-primary-foreground: oklch(0.97 0.03 85);
+  --sidebar-accent: oklch(0.93 0.04 85);
+  --sidebar-accent-foreground: oklch(0.3 0.1 25);
+  --sidebar-border: oklch(0.86 0.04 80);
+  --sidebar-ring: oklch(0.55 0.15 60);
+
+  --color-chart-1: var(--maroon);
+  --color-chart-2: var(--gold);
+  --color-chart-3: var(--mango);
+  --color-chart-4: var(--peacock);
+  --color-chart-5: var(--gold-deep);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ===== Utility classes ===== */
+
+.font-telugu {
+  font-family: var(--font-telugu);
+}
+.font-display {
+  font-family: var(--font-display);
+}
+.font-body {
+  font-family: var(--font-body);
+}
+
+.text-gold-gradient {
+  background: var(--gradient-gold-shine);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shimmer 6s linear infinite;
+}
+
+.bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+.bg-gradient-maroon {
+  background: var(--gradient-maroon);
+}
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+.shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+/* Decorative divider */
+.divider-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gold-deep);
+}
+.divider-ornament::before,
+.divider-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold) 50%,
+    transparent
+  );
+}
+
+/* ===== Animations ===== */
+
+@keyframes gold-shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(110vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(40px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 color-mix(in oklab, var(--gold) 60%, transparent),
+      var(--shadow-gold);
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px color-mix(in oklab, var(--gold) 0%, transparent),
+      var(--shadow-gold);
+  }
+}
+
+.animate-glow {
+  animation: glow-pulse 2.4s ease-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+/* ===== Telugu typography refinements ===== */
+.font-telugu {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures contextual;
+  word-spacing: 0.02em;
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+
+/* ===== Print / PDF layout mode =====
+   Toggled by adding `print-mode` to the <html> root.
+   Adjusts margins, kills animations and ensures Telugu spacing
+   renders crisply on A4 / US Letter. */
+.print-mode body {
+  background: white !important;
+}
+.print-mode .no-print {
+  display: none !important;
+}
+.print-mode *,
+.print-mode *::before,
+.print-mode *::after {
+  animation: none !important;
+  transition: none !important;
+}
+.print-mode .invitation-stage {
+  padding: 0 !important;
+  min-height: auto !important;
+  background: white !important;
+  display: block !important;
+}
+.print-mode .invitation-card {
+  box-shadow: none !important;
+  max-width: 190mm !important; /* A4 content width with 10mm margins */
+  margin: 0 auto !important;
+  border-radius: 0 !important;
+}
+.print-mode .invitation-card .font-telugu {
+  line-height: 1.85;
+  word-spacing: 0.04em;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+  html,
+  body {
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .invitation-card {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
